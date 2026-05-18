@@ -1,12 +1,8 @@
-{
-  "name": "fyp-portfolio",
-  "version": "1.0.0",
-  "description": "FYP Portfolio - Autonomous Medicine Delivery Robot - Air University P2222",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
-  "dependencies": {
-    "express": "^4.18.2"
-  }
-}
+[build]
+builder = "nixpacks"
+
+[deploy]
+startCommand = "npm start"
+healthcheckPath = "/"
+healthcheckTimeout = 30
+restartPolicyType = "on_failure"
